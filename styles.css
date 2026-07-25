@@ -653,6 +653,10 @@ textarea {
   padding: 38px 0;
 }
 
+.footer-grid > div:nth-child(2) {
+  text-align: center;
+}
+
 .footer-title {
   color: var(--white);
   margin-top: 0;
