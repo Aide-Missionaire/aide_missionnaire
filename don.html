@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Faire un don a Aide Missionnaire." />
+    <title>Aide Missionnaire | Don</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="photos%20%C3%A0%20mettre%20dans%20le%20site/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-wrap">
+        <a class="brand" href="index.html"><img src="photos%20%C3%A0%20mettre%20dans%20le%20site/logo.png" alt="Logo Aide Missionnaire" /><span class="brand-text">Aide<br />Missionnaire</span></a>
+        <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" /></svg></button>
+        <nav class="main-nav"><ul><li><a href="index.html">Accueil</a></li><li><a href="parrainage.html">Parrainage</a></li><li><a class="active" href="don.html">Don</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="association.html">Actualités</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+        <a class="btn btn-primary desktop-donate" href="don.html">Faire un don</a>
+      </div>
+    </header>
+    <main class="section">
+      <div class="container">
+        <h1 class="title">Faire un don</h1>
+        <p class="subtitle">Vos dons financent la <strong>nourriture</strong>, les <strong>soins</strong> et les projets <strong>educatifs</strong>.</p>
+        <p class="tax-highlight">66% de vos dons sont deductibles d'impots</p>
+        <div class="grid-3">
+          <article class="card"><h2>Nourriture</h2><img class="don-card-image" src="photos%20%C3%A0%20mettre%20dans%20le%20site/Riz/riz.jpeg" alt="Riz pour les familles" /><p class="muted">Soutien alimentaire immediat.</p></article>
+          <article class="card"><h2>Soins</h2><img class="don-card-image" src="photos%20%C3%A0%20mettre%20dans%20le%20site/duo.jpeg" alt="Soins et accompagnement medical" /><p class="muted">Acces aux consultations et medicaments essentiels.</p></article>
+          <article class="card"><h2>Projets</h2><img class="don-card-image" src="photos%20%C3%A0%20mettre%20dans%20le%20site/pancarte.jpeg" alt="Projets educatifs de l'association" /><p class="muted">Investissements dans les ecoles et l'accompagnement.</p></article>
+        </div>
+        <p style="margin-top: 20px"><button class="btn btn-red" type="button" data-fake-stripe>Faire un don (Stripe)</button></p>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid"><div><h3 class="footer-title">Aide Missionnaire</h3><p class="footer-note">Association humanitaire pour l'<strong>education</strong>, la <strong>sante</strong> et l'<strong>aide sociale</strong>.</p></div><div><h3 class="footer-title">Liens</h3><ul class="footer-list"><li><a href="index.html">Accueil</a></li><li><a href="parrainage.html">Parrainage</a></li><li><a href="don.html">Don</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="association.html">Actualités</a></li><li><a href="contact.html">Contact</a></li><li><a href="mentions-legales.html">Mentions legales</a></li><li><a href="politique-confidentialite.html">Politique de confidentialite</a></li></ul></div><div><h3 class="footer-title">Newsletter</h3><form data-message="Merci pour votre inscription a la newsletter."><label for="nlemail3">Email</label><input id="nlemail3" type="email" placeholder="Votre email" required /><button class="btn btn-primary" type="submit">S'inscrire</button></form></div></div>
+      <div class="container footer-bottom">© <span id="current-year"></span> Aide Missionnaire</div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
