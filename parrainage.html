@@ -22,104 +22,454 @@
     </header>
 
     <main class="section soft">
-      <div class="container">
-        <h1 class="title">Formulaire complet de parrainage</h1>
-        <p class="tax-highlight">Le parrainage est aussi déductible d'impôts (66%).</p>
+  <div class="container">
 
-        <article class="card contact-lines">
-          <p><strong>Aide Missionnaire</strong></p>
-          <p>30 rue de la Fontaine Caron</p>
-          <p>44300 NANTES</p>
-          <p>Tél : 06 12 51 51 64</p>
-          <p>Email : <a href="mailto:gabriel.c.loirat@gmail.com">gabriel.c.loirat@gmail.com</a></p>
-        </article>
+    <h1 class="title">Devenir parrain ou marraine</h1>
 
-        <article class="card parrainage-form">
-          <form data-message="Merci, votre formulaire de parrainage a bien été envoyé.">
-            <div class="form-grid-2">
-              <div><label for="nom">Nom</label><input id="nom" type="text" required /></div>
-              <div><label for="prenom">Prénom</label><input id="prenom" type="text" required /></div>
-            </div>
+    <p class="tax-highlight">
+      Soutenez la scolarité et l'avenir d'un enfant à Madagascar.
+      Vos dons sont déductibles des impôts à hauteur de 66%.
+    </p>
 
-            <div><label for="adresse">Adresse</label><input id="adresse" type="text" /></div>
 
-            <div class="form-grid-2">
-              <div><label for="cp">Code postal</label><input id="cp" type="text" /></div>
-              <div><label for="ville">Ville</label><input id="ville" type="text" /></div>
-            </div>
+    <!-- Informations association -->
+    <article class="card contact-lines">
+      <h2>Association Aide Missionnaire</h2>
 
-            <div class="form-grid-2">
-              <div><label for="mail">Adresse mail</label><input id="mail" type="email" /></div>
-              <div><label for="tel">Téléphone</label><input id="tel" type="tel" /></div>
-            </div>
+      <p>
+        Grâce au parrainage, vous participez directement à l'éducation
+        d'un enfant et au développement des écoles partenaires.
+      </p>
 
-            <div class="check-line"><input id="enfant-parraine" type="checkbox" /><label for="enfant-parraine">Enfant actuellement parrainé</label></div>
+      <p>
+        📍 30 rue de la Fontaine Caron<br>
+        44300 Nantes
+      </p>
 
-            <div class="inline-3">
-              <div><label for="p1-prenom">Prénom</label><input id="p1-prenom" type="text" /></div>
-              <div><label for="p1-num">Numéro</label><input id="p1-num" type="text" /></div>
-              <div><label for="p1-cot">Cotisation 2026/27 (€)</label><input id="p1-cot" type="number" min="0" step="0.01" /></div>
-            </div>
-            <div class="inline-3">
-              <div><label for="p2-prenom">Prénom</label><input id="p2-prenom" type="text" /></div>
-              <div><label for="p2-num">Numéro</label><input id="p2-num" type="text" /></div>
-              <div><label for="p2-cot">Cotisation 2026/27 (€)</label><input id="p2-cot" type="number" min="0" step="0.01" /></div>
-            </div>
-            <div class="inline-3">
-              <div><label for="p3-prenom">Prénom</label><input id="p3-prenom" type="text" /></div>
-              <div><label for="p3-num">Numéro</label><input id="p3-num" type="text" /></div>
-              <div><label for="p3-cot">Cotisation 2026/27 (€)</label><input id="p3-cot" type="number" min="0" step="0.01" /></div>
-            </div>
+      <p>
+        📞 06 12 51 51 64
+      </p>
 
-            <div class="check-line"><input id="nouveau" type="checkbox" /><label for="nouveau">Demande de nouveaux parrainages</label></div>
-            <p class="small-note">Seuls quelques nouveaux parrainages sont proposés cette année.</p>
+      <p>
+        ✉️ gabriel.c.loirat@gmail.com
+      </p>
+    </article>
 
-            <div class="check-line">
-              <input id="garcon" type="checkbox" /><label for="garcon">Garçon</label>
-              <input id="fille" type="checkbox" /><label for="fille">Fille</label>
-              <input id="primaire" type="checkbox" /><label for="primaire">Primaire</label>
-              <input id="college" type="checkbox" /><label for="college">Collège</label>
-              <input id="lycee" type="checkbox" /><label for="lycee">Lycée</label>
-            </div>
 
-            <p class="small-note">Cotisations : 55€ primaire, 70€ collégien, 85€ lycéen (par an).</p>
 
-            <div class="form-grid-2">
-              <div><label for="logement">Participation logement (€)</label><input id="logement" type="number" min="0" step="0.01" /></div>
-              <div><label for="aide-alim">Participation aide alimentaire (€)</label><input id="aide-alim" type="number" min="0" step="0.01" /></div>
-            </div>
-            <p class="small-note">Pour info : logement environ 5€/mois, aide alimentaire 10€/mois.</p>
+    <article class="card parrainage-form">
 
-            <div><label for="etudes">Participation études supérieures (€)</label><input id="etudes" type="number" min="0" step="0.01" /></div>
-            <div><label for="dispensaire">Aide au dispensaire (caisse des pauvres, lait) (€)</label><input id="dispensaire" type="number" min="0" step="0.01" /></div>
-            <div><label for="travaux">Participation aux travaux dans les écoles (€)</label><input id="travaux" type="number" min="0" step="0.01" /></div>
-            <div><label for="autres">Autres dons (€)</label><input id="autres" type="number" min="0" step="0.01" /></div>
+      <form data-message="Merci, votre demande de parrainage a bien été envoyée.">
 
-            <div class="total-box">
-              <label for="total"><strong>TOTAL (€)</strong></label>
-              <input id="total" type="number" min="0" step="0.01" />
-            </div>
 
-            <p class="small-note">
-              Virement : IBAN <strong>FR76 1027 8051 3400 0205 4864 563</strong> de préférence, ou chèque à l’ordre de « Aide Missionnaire » à l’adresse ci-dessus.
-              Ces sommes sont déductibles des impôts.
-            </p>
-            <p class="small-note">
-              Merci de joindre ce document à votre chèque, ou de l’adresser par mail à <strong>gabriel.c.loirat@gmail.com</strong> en complément de votre virement,
-              avant le 31 décembre 2024.
-            </p>
+        <!-- Coordonnées -->
 
-            <div class="form-grid-2">
-              <div><label for="fait-a">Fait à</label><input id="fait-a" type="text" /></div>
-              <div><label for="date-sign">Le</label><input id="date-sign" type="date" /></div>
-            </div>
-            <div><label for="signature">Signature</label><input id="signature" type="text" placeholder="Nom et signature" /></div>
+        <h2>1. Vos informations</h2>
 
-            <button class="btn btn-primary" type="submit">Envoyer le formulaire</button>
-          </form>
-        </article>
-      </div>
-    </main>
+        <p class="small-note">
+          Ces informations nous permettent de vous contacter et de suivre votre parrainage.
+        </p>
+
+
+        <div class="form-grid-2">
+
+          <div>
+            <label for="nom">Nom *</label>
+            <input id="nom" type="text" required>
+          </div>
+
+
+          <div>
+            <label for="prenom">Prénom *</label>
+            <input id="prenom" type="text" required>
+          </div>
+
+        </div>
+
+
+        <label for="adresse">Adresse</label>
+        <input id="adresse" type="text">
+
+
+        <div class="form-grid-2">
+
+          <div>
+            <label for="cp">Code postal</label>
+            <input id="cp" type="text">
+          </div>
+
+
+          <div>
+            <label for="ville">Ville</label>
+            <input id="ville" type="text">
+          </div>
+
+        </div>
+
+
+
+        <div class="form-grid-2">
+
+          <div>
+            <label for="mail">Adresse mail *</label>
+            <input id="mail" type="email" required>
+          </div>
+
+
+          <div>
+            <label for="tel">Téléphone</label>
+            <input id="tel" type="tel">
+          </div>
+
+        </div>
+
+
+
+
+        <!-- Parrainage existant -->
+
+
+        <hr>
+
+
+        <h2>2. Votre situation actuelle</h2>
+
+
+        <div class="check-line">
+
+          <input id="enfant-parraine" type="checkbox">
+
+          <label for="enfant-parraine">
+            Je parraine déjà un ou plusieurs enfants
+          </label>
+
+        </div>
+
+
+        <p class="small-note">
+          Si vous êtes déjà parrain ou marraine, indiquez les informations ci-dessous.
+        </p>
+
+
+
+        <div class="inline-3">
+
+          <div>
+            <label>Prénom enfant</label>
+            <input type="text">
+          </div>
+
+          <div>
+            <label>N° parrainage</label>
+            <input type="text">
+          </div>
+
+          <div>
+            <label>Cotisation annuelle (€)</label>
+            <input type="number">
+          </div>
+
+        </div>
+
+
+
+        <div class="inline-3">
+
+          <div>
+            <label>Prénom enfant</label>
+            <input type="text">
+          </div>
+
+          <div>
+            <label>N° parrainage</label>
+            <input type="text">
+          </div>
+
+          <div>
+            <label>Cotisation annuelle (€)</label>
+            <input type="number">
+          </div>
+
+        </div>
+
+
+
+
+        <!-- Nouveau parrainage -->
+
+
+        <hr>
+
+
+        <h2>3. Vous souhaitez parrainer un nouvel enfant ?</h2>
+
+
+        <div class="check-line">
+
+          <input id="nouveau" type="checkbox">
+
+          <label for="nouveau">
+            Je souhaite recevoir une proposition de nouveau parrainage
+          </label>
+
+        </div>
+
+
+        <p class="small-note">
+          Quelques nouveaux parrainages sont disponibles chaque année.
+        </p>
+
+
+
+        <h3>Quel enfant souhaitez-vous soutenir ?</h3>
+
+
+        <div class="check-line">
+
+          <input id="garcon" type="checkbox">
+          <label for="garcon">Garçon</label>
+
+
+          <input id="fille" type="checkbox">
+          <label for="fille">Fille</label>
+
+        </div>
+
+
+
+        <h3>Niveau scolaire</h3>
+
+
+        <div class="check-line">
+
+          <input id="primaire" type="checkbox">
+          <label for="primaire">
+            Primaire - 55 €/an
+          </label>
+
+
+          <input id="college" type="checkbox">
+          <label for="college">
+            Collège - 70 €/an
+          </label>
+
+
+          <input id="lycee" type="checkbox">
+          <label for="lycee">
+            Lycée - 85 €/an
+          </label>
+
+
+        </div>
+
+
+
+
+
+        <!-- Aides complémentaires -->
+
+
+        <hr>
+
+
+        <h2>4. Vous pouvez aussi soutenir d'autres actions</h2>
+
+
+        <p class="small-note">
+          Ces contributions sont facultatives et permettent d'aider
+          davantage les enfants et les écoles.
+        </p>
+
+
+
+        <div class="form-grid-2">
+
+          <div>
+            <label>
+              Aide au logement (€)
+            </label>
+
+            <input id="logement" type="number">
+          </div>
+
+
+          <div>
+
+            <label>
+              Aide alimentaire (€)
+            </label>
+
+            <input id="aide-alim" type="number">
+
+          </div>
+
+
+        </div>
+
+
+
+        <p class="small-note">
+          À titre indicatif :
+          logement environ 5 €/mois,
+          aide alimentaire environ 10 €/mois.
+        </p>
+
+
+
+
+        <label>
+          Soutien aux études supérieures (€)
+        </label>
+
+        <input id="etudes" type="number">
+
+
+
+        <label>
+          Soutien au dispensaire (soins et aide alimentaire) (€)
+        </label>
+
+        <input id="dispensaire" type="number">
+
+
+
+        <label>
+          Travaux et équipements des écoles (€)
+        </label>
+
+        <input id="travaux" type="number">
+
+
+
+        <label>
+          Autre don (€)
+        </label>
+
+        <input id="autres" type="number">
+
+
+
+
+
+        <!-- Total -->
+
+
+        <div class="total-box">
+
+          <label>
+            <strong>Total annuel (€)</strong>
+          </label>
+
+          <input id="total" type="number">
+
+        </div>
+
+
+
+
+
+        <!-- Paiement -->
+
+
+        <hr>
+
+
+        <h2>5. Paiement</h2>
+
+
+        <p>
+          Vous pouvez effectuer votre règlement :
+        </p>
+
+
+        <ul>
+
+          <li>
+            Par virement bancaire (recommandé)
+          </li>
+
+          <li>
+            Par chèque à l'ordre de "Aide Missionnaire"
+          </li>
+
+        </ul>
+
+
+        <p class="small-note">
+
+          IBAN :
+          <strong>
+          FR76 1027 8051 3400 0205 4864 563
+          </strong>
+
+        </p>
+
+
+
+        <p class="small-note">
+          Merci d'envoyer ce formulaire par mail ou de le joindre
+          à votre règlement.
+        </p>
+
+
+
+
+
+
+        <!-- Validation -->
+
+
+        <hr>
+
+
+        <h2>6. Validation</h2>
+
+
+        <div class="form-grid-2">
+
+
+          <div>
+            <label>Fait à</label>
+            <input type="text">
+          </div>
+
+
+          <div>
+            <label>Date</label>
+            <input type="date">
+          </div>
+
+
+        </div>
+
+
+
+        <div class="check-line">
+
+          <input type="checkbox" required>
+
+          <label>
+            Je confirme ma demande de parrainage.
+          </label>
+
+        </div>
+
+
+
+        <button class="btn btn-primary" type="submit">
+          Envoyer ma demande
+        </button>
+
+
+
+      </form>
+
+
+    </article>
+
+
+  </div>
+</main>
 
     <footer class="site-footer">
       <div class="container footer-grid"><div><h3 class="footer-title">Aide Missionnaire</h3><p class="footer-note">Association humanitaire pour l'<strong>éducation</strong>, la <strong>santé</strong> et l'<strong>aide sociale</strong>.</p></div><div><h3 class="footer-title">Liens</h3><ul class="footer-list"><li><a href="index.html">Accueil</a></li><li><a href="parrainage.html">Parrainage</a></li><li><a href="don.html">Don</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="association.html">Actualités</a></li><li><a href="contact.html">Contact</a></li><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="politique-confidentialite.html">Politique de confidentialité</a></li></ul></div><div><h3 class="footer-title">Newsletter</h3><form data-message="Merci pour votre inscription à la newsletter."><label for="nlemail2">Email</label><input id="nlemail2" type="email" placeholder="Votre email" required /><button class="btn btn-primary" type="submit">S'inscrire</button></form></div></div>
