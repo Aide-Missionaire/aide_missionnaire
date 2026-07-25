@@ -14,6 +14,25 @@ document.addEventListener("DOMContentLoaded", () => {
     yearTarget.textContent = String(new Date().getFullYear());
   }
 
+  document.querySelectorAll(".footer-grid").forEach((footer) => {
+    const newsletter = Array.from(footer.children).find(
+      (section) => section.querySelector(".footer-title")?.textContent.trim() === "Newsletter",
+    );
+    newsletter?.remove();
+    footer.querySelectorAll('a[href="mentions-legales.html"], a[href="politique-confidentialite.html"]').forEach((link) => {
+      link.closest("li")?.remove();
+    });
+
+    const legalLinks = document.createElement("div");
+    legalLinks.innerHTML = `
+      <h3 class="footer-title">Informations légales</h3>
+      <ul class="footer-list">
+        <li><a href="https://aide-missionnaire.netlify.app/mentions-legales">Mentions légales</a></li>
+        <li><a href="https://aide-missionnaire.netlify.app/politique-confidentialite">Politique de confidentialité</a></li>
+      </ul>`;
+    footer.append(legalLinks);
+  });
+
   const recipientEmail = "gabriel.c.loirat@gmail.com";
 
   document.querySelectorAll("form[data-message]").forEach((form) => {
