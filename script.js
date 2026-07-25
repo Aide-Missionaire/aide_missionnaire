@@ -17,24 +17,60 @@ document.addEventListener("DOMContentLoaded", () => {
   const recipientEmail = "gabriel.c.loirat@gmail.com";
 
   document.querySelectorAll("form[data-message]").forEach((form) => {
-    form.addEventListener("submit", (event) => {
+    const status = document.createElement("p");
+    status.className = "form-status";
+    status.setAttribute("aria-live", "polite");
+    form.append(status);
+
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
 
       const fields = Array.from(form.querySelectorAll("input, textarea, select"));
-      const lines = fields
+      const payload = {};
+      fields
         .filter((field) => field.type !== "submit" && field.type !== "button")
-        .map((field) => {
+        .forEach((field) => {
           const label = form.querySelector(`label[for="${field.id}"]`);
-          const fieldName = label ? label.textContent.trim() : field.name || field.id;
-          const value = field.type === "checkbox" ? (field.checked ? "Oui" : "Non") : field.value;
-          return `${fieldName} : ${value}`;
+          const baseName = label ? label.textContent.trim() : field.name || field.id;
+          let fieldName = baseName;
+          let count = 2;
+
+          while (Object.prototype.hasOwnProperty.call(payload, fieldName)) {
+            fieldName = `${baseName} (${count})`;
+            count += 1;
+          }
+
+          payload[fieldName] = field.type === "checkbox" ? (field.checked ? "Oui" : "Non") : field.value;
         });
       const pageTitle = document.querySelector("h1, h2")?.textContent.trim() || "Formulaire";
-      const subject = `Aide Missionnaire — ${pageTitle}`;
-      const mailto = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+      const submitButton = form.querySelector('button[type="submit"]');
+      const emailField = fields.find((field) => field.type === "email" && field.value);
 
-      window.location.href = mailto;
-      form.reset();
+      payload._subject = `Aide Missionnaire — ${pageTitle}`;
+      payload._template = "table";
+      if (emailField) payload._replyto = emailField.value;
+
+      status.textContent = "Envoi en cours…";
+      status.classList.remove("is-success", "is-error");
+      if (submitButton) submitButton.disabled = true;
+
+      try {
+        const response = await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(payload),
+        });
+
+        if (!response.ok) throw new Error("Échec de l’envoi");
+        form.reset();
+        status.textContent = "Message envoyé !";
+        status.classList.add("is-success");
+      } catch (error) {
+        status.textContent = "L’envoi a échoué. Veuillez réessayer.";
+        status.classList.add("is-error");
+      } finally {
+        if (submitButton) submitButton.disabled = false;
+      }
     });
   });
 
