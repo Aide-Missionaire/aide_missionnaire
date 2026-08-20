@@ -80,35 +80,111 @@ h3 {
 }
 
 .btn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   border: none;
   border-radius: 999px;
-  padding: 12px 22px;
+  padding: 13px 26px;
   font-weight: 700;
+  letter-spacing: 0.02em;
   cursor: pointer;
-  transition: transform 0.2s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
+  transition:
+    transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.28s ease,
+    filter 0.28s ease;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.32) 48%, transparent 72%);
+  transform: translateX(-130%);
+  transition: transform 0.55s ease;
+  pointer-events: none;
 }
 
 .btn:hover {
-  transform: translateY(-1px);
+  transform: translateY(-3px) scale(1.04);
+}
+
+.btn:hover::after {
+  transform: translateX(130%);
+}
+
+.btn:active {
+  transform: translateY(-1px) scale(0.99);
 }
 
 .btn-primary {
-  background: var(--green-main);
+  background: linear-gradient(135deg, #02a34e 0%, #016531 52%, #014d26 100%);
   color: var(--white);
+  box-shadow: 0 10px 22px rgba(1, 101, 49, 0.28);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 16px 32px rgba(1, 101, 49, 0.4);
+  filter: brightness(1.08);
 }
 
 .btn-red {
-  background: var(--red-accent);
+  background: linear-gradient(135deg, #d31414 0%, #970d00 52%, #6f0900 100%);
   color: var(--white);
+  box-shadow: 0 10px 22px rgba(151, 13, 0, 0.3);
+}
+
+.btn-red:hover {
+  box-shadow: 0 16px 32px rgba(151, 13, 0, 0.44);
+  filter: brightness(1.08);
 }
 
 .btn-outline {
   border: 2px solid var(--green-main);
   color: var(--green-main);
   background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--green-main);
+  color: var(--white);
+}
+
+.btn-helloasso {
+  animation: cta-pulse 2.4s ease-in-out infinite;
+}
+
+.btn-helloasso:hover {
+  animation: none;
+}
+
+@keyframes cta-pulse {
+  0%,
+  100% {
+    box-shadow: 0 10px 22px rgba(151, 13, 0, 0.3);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 16px 34px rgba(151, 13, 0, 0.48);
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn::after,
+  .btn-helloasso {
+    animation: none;
+    transition: none;
+  }
+
+  .btn:hover {
+    transform: none;
+  }
 }
 
 .site-header {
@@ -717,6 +793,11 @@ h3 {
   background: #f8fcf9;
 }
 
+.totals-grid {
+  display: grid;
+  gap: 14px;
+}
+
 .total-box input {
   font-size: 1.35rem;
   font-weight: 800;
@@ -858,6 +939,10 @@ textarea {
 
   .form-grid-2 {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .totals-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .inline-3 {

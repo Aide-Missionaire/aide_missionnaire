@@ -161,7 +161,7 @@
 
           <div>
             <label>Cotisation annuelle (€)</label>
-            <input class="js-sum" type="number" min="0" step="1">
+            <input class="js-sum-annual" type="number" min="0" step="1">
           </div>
 
         </div>
@@ -182,7 +182,7 @@
 
           <div>
             <label>Cotisation annuelle (€)</label>
-            <input class="js-sum" type="number" min="0" step="1">
+            <input class="js-sum-annual" type="number" min="0" step="1">
           </div>
 
         </div>
@@ -349,12 +349,21 @@
         <!-- Total -->
 
 
-        <div class="total-box">
-          <label for="total">
-            <strong>Total annuel (€)</strong>
-          </label>
-          <input id="total" type="text" value="0" readonly>
-          <p class="small-note">Ce montant se calcule automatiquement à partir des choix ci-dessus.</p>
+        <div class="totals-grid">
+          <div class="total-box">
+            <label for="total-annuel">
+              <strong>Total annuel (€)</strong>
+            </label>
+            <input id="total-annuel" type="text" value="0" readonly>
+            <p class="small-note">Parrainage scolaire et cotisations existantes, par an.</p>
+          </div>
+          <div class="total-box">
+            <label for="total">
+              <strong>Total (€)</strong>
+            </label>
+            <input id="total" type="text" value="0" readonly>
+            <p class="small-note">Dons complémentaires : logement, alimentation, études, dispensaire, travaux et autre don.</p>
+          </div>
         </div>
 
 

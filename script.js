@@ -128,19 +128,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const sponsorshipForm = document.querySelector(".parrainage-form form");
   if (sponsorshipForm) {
+    const annualInput = sponsorshipForm.querySelector("#total-annuel");
     const totalInput = sponsorshipForm.querySelector("#total");
     const amountChecks = sponsorshipForm.querySelectorAll("input[data-amount]");
-    const sumInputs = sponsorshipForm.querySelectorAll(".js-sum");
+    const annualInputs = sponsorshipForm.querySelectorAll(".js-sum-annual");
+    const extraInputs = sponsorshipForm.querySelectorAll(".js-sum");
+
+    const sumFields = (fields) =>
+      Array.from(fields).reduce((sum, field) => sum + (Number(field.value) || 0), 0);
 
     const updateTotal = () => {
-      let total = 0;
+      let annual = sumFields(annualInputs);
       amountChecks.forEach((checkbox) => {
-        if (checkbox.checked) total += Number(checkbox.dataset.amount) || 0;
+        if (checkbox.checked) annual += Number(checkbox.dataset.amount) || 0;
       });
-      sumInputs.forEach((input) => {
-        total += Number(input.value) || 0;
-      });
-      if (totalInput) totalInput.value = String(total);
+      const extra = sumFields(extraInputs);
+      if (annualInput) annualInput.value = String(annual);
+      if (totalInput) totalInput.value = String(extra);
     };
 
     sponsorshipForm.addEventListener("input", updateTotal);
