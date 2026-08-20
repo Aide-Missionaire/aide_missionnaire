@@ -75,6 +75,10 @@ h3 {
   line-height: 1.7;
 }
 
+.subtitle-wide {
+  max-width: none;
+}
+
 .btn {
   border: none;
   border-radius: 999px;
@@ -422,6 +426,12 @@ h3 {
   margin-top: 12px;
 }
 
+.actions-cards h3 {
+  margin: 0 0 6px;
+  color: var(--green-main);
+  font-size: clamp(1.85rem, 3vw, 2.4rem);
+}
+
 .action-list {
   margin: 12px 0 0;
   padding: 0;
@@ -449,6 +459,18 @@ h3 {
   background: var(--green-main);
 }
 
+.parrainage-head {
+  display: grid;
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.parrainage-head .title,
+.parrainage-head .subtitle,
+.parrainage-head .tax-highlight {
+  margin: 0;
+}
+
 .parrainage-intro {
   margin: 8px 0 4px;
 }
@@ -469,6 +491,34 @@ h3 {
   object-fit: cover;
   border-radius: 14px;
   margin: 10px 0 8px;
+}
+
+.don-cta {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-helloasso {
+  padding: 20px 48px;
+  font-size: 1.28rem;
+  min-width: min(460px, 92%);
+}
+
+.legal-card h2 {
+  color: var(--green-main);
+  font-size: 1.35rem;
+  margin: 28px 0 10px;
+}
+
+.legal-card p,
+.legal-card li {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.legal-card ul {
+  padding-left: 20px;
 }
 
 .brand-text {

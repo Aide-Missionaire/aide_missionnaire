@@ -93,13 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const stripeButton = document.querySelector("[data-fake-stripe]");
-  if (stripeButton) {
-    stripeButton.addEventListener("click", () => {
-      window.alert("Intégration Stripe prête : connectez ici votre lien ou checkout Stripe.");
-    });
-  }
-
   const track = document.querySelector(".carousel-track");
   const prevBtn = document.querySelector("[data-carousel-prev]");
   const nextBtn = document.querySelector("[data-carousel-next]");
