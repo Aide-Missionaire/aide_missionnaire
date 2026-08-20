@@ -14,6 +14,39 @@ document.addEventListener("DOMContentLoaded", () => {
     yearTarget.textContent = String(new Date().getFullYear());
   }
 
+  const counters = document.querySelectorAll(".key-num[data-count]");
+  if (counters.length) {
+    const duration = 2400;
+    const easeOut = (t) => 1 - (1 - t) ** 3;
+
+    const animateCounter = (el) => {
+      const target = Number(el.dataset.count);
+      const suffix = el.dataset.suffix || "";
+      const start = performance.now();
+
+      const tick = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        el.textContent = `${Math.round(easeOut(progress) * target)}${suffix}`;
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+
+      requestAnimationFrame(tick);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          animateCounter(entry.target);
+          obs.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.45 },
+    );
+
+    counters.forEach((el) => observer.observe(el));
+  }
+
   document.querySelectorAll(".footer-grid").forEach((footer) => {
     const newsletter = Array.from(footer.children).find(
       (section) => section.querySelector(".footer-title")?.textContent.trim() === "Newsletter",
