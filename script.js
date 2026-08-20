@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     footer.append(legalLinks);
   });
 
-  const recipientEmail = "gabriel.c.loirat@gmail.com";
+  const recipientEmail = "aidemissionnaire@gmail.com";
 
   document.querySelectorAll("form[data-message]").forEach((form) => {
     const status = document.createElement("p");
