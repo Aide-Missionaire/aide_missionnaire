@@ -161,7 +161,7 @@
 
           <div>
             <label>Cotisation annuelle (€)</label>
-            <input type="number">
+            <input class="js-sum" type="number" min="0" step="1">
           </div>
 
         </div>
@@ -182,7 +182,7 @@
 
           <div>
             <label>Cotisation annuelle (€)</label>
-            <input type="number">
+            <input class="js-sum" type="number" min="0" step="1">
           </div>
 
         </div>
@@ -237,19 +237,19 @@
 
         <div class="check-line">
 
-          <input id="primaire" type="checkbox">
+          <input id="primaire" type="checkbox" data-amount="55">
           <label for="primaire">
             Primaire - 55 €/an
           </label>
 
 
-          <input id="college" type="checkbox">
+          <input id="college" type="checkbox" data-amount="70">
           <label for="college">
             Collège - 70 €/an
           </label>
 
 
-          <input id="lycee" type="checkbox">
+          <input id="lycee" type="checkbox" data-amount="85">
           <label for="lycee">
             Lycée - 85 €/an
           </label>
@@ -284,7 +284,7 @@
               Aide au logement (€)
             </label>
 
-            <input id="logement" type="number">
+            <input id="logement" class="js-sum" type="number" min="0" step="1">
           </div>
 
 
@@ -294,7 +294,7 @@
               Aide alimentaire (€)
             </label>
 
-            <input id="aide-alim" type="number">
+            <input id="aide-alim" class="js-sum" type="number" min="0" step="1">
 
           </div>
 
@@ -316,7 +316,7 @@
           Soutien aux études supérieures (€)
         </label>
 
-        <input id="etudes" type="number">
+        <input id="etudes" class="js-sum" type="number" min="0" step="1">
 
 
 
@@ -324,7 +324,7 @@
           Soutien au dispensaire (soins et aide alimentaire) (€)
         </label>
 
-        <input id="dispensaire" type="number">
+        <input id="dispensaire" class="js-sum" type="number" min="0" step="1">
 
 
 
@@ -332,7 +332,7 @@
           Travaux et équipements des écoles (€)
         </label>
 
-        <input id="travaux" type="number">
+        <input id="travaux" class="js-sum" type="number" min="0" step="1">
 
 
 
@@ -340,7 +340,7 @@
           Autre don (€)
         </label>
 
-        <input id="autres" type="number">
+        <input id="autres" class="js-sum" type="number" min="0" step="1">
 
 
 
@@ -350,13 +350,11 @@
 
 
         <div class="total-box">
-
-          <label>
+          <label for="total">
             <strong>Total annuel (€)</strong>
           </label>
-
-          <input id="total" type="number">
-
+          <input id="total" type="text" value="0" readonly>
+          <p class="small-note">Ce montant se calcule automatiquement à partir des choix ci-dessus.</p>
         </div>
 
 

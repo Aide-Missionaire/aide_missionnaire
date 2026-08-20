@@ -265,15 +265,11 @@ h3 {
   gap: 12px;
   scroll-snap-type: x mandatory;
   padding-bottom: 4px;
+  scrollbar-width: none;
 }
 
 .carousel-track::-webkit-scrollbar {
-  height: 8px;
-}
-
-.carousel-track::-webkit-scrollbar-thumb {
-  background: #bdd6c8;
-  border-radius: 999px;
+  display: none;
 }
 
 .slide {
@@ -288,21 +284,49 @@ h3 {
 }
 
 .carousel-controls {
-  margin-top: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 280px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .arrow-btn {
-  width: 44px;
-  height: 44px;
+  pointer-events: auto;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: none;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--green-main);
+  box-shadow: 0 8px 24px rgba(1, 101, 49, 0.22);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.arrow-btn svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.arrow-btn:hover {
+  transform: scale(1.08);
   background: var(--green-main);
   color: var(--white);
-  font-size: 1.4rem;
-  cursor: pointer;
+}
+
+.arrow-btn:focus-visible {
+  outline: 3px solid rgba(1, 101, 49, 0.35);
+  outline-offset: 3px;
 }
 
 .slide-last {
@@ -498,7 +522,8 @@ h3 {
 }
 
 .don-cta {
-  margin-top: 40px;
+  margin-top: 88px;
+  margin-bottom: 12px;
   display: flex;
   justify-content: center;
 }
@@ -690,6 +715,14 @@ h3 {
   border-radius: 12px;
   border: 1px dashed #b6c9bc;
   background: #f8fcf9;
+}
+
+.total-box input {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--green-main);
+  background: #ffffff;
+  cursor: default;
 }
 
 .footer-note strong {

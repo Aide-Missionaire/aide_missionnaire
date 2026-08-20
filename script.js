@@ -126,6 +126,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const sponsorshipForm = document.querySelector(".parrainage-form form");
+  if (sponsorshipForm) {
+    const totalInput = sponsorshipForm.querySelector("#total");
+    const amountChecks = sponsorshipForm.querySelectorAll("input[data-amount]");
+    const sumInputs = sponsorshipForm.querySelectorAll(".js-sum");
+
+    const updateTotal = () => {
+      let total = 0;
+      amountChecks.forEach((checkbox) => {
+        if (checkbox.checked) total += Number(checkbox.dataset.amount) || 0;
+      });
+      sumInputs.forEach((input) => {
+        total += Number(input.value) || 0;
+      });
+      if (totalInput) totalInput.value = String(total);
+    };
+
+    sponsorshipForm.addEventListener("input", updateTotal);
+    sponsorshipForm.addEventListener("change", updateTotal);
+    updateTotal();
+  }
   const track = document.querySelector(".carousel-track");
   const prevBtn = document.querySelector("[data-carousel-prev]");
   const nextBtn = document.querySelector("[data-carousel-next]");
