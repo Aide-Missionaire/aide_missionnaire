@@ -80,67 +80,35 @@ h3 {
 }
 
 .btn {
-  --btn-fill: var(--green-main);
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  border: 2px solid var(--btn-fill);
+  border: none;
   border-radius: 999px;
-  padding: 11px 22px;
+  padding: 12px 22px;
   font-weight: 700;
   cursor: pointer;
+  transition: transform 0.2s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  color: var(--btn-fill);
-  z-index: 0;
-  transition: color 0.35s ease;
-}
-
-.btn::before {
-  content: "";
-  position: absolute;
-  left: -25%;
-  bottom: 0;
-  width: 150%;
-  height: 0;
-  background: var(--btn-fill);
-  border-radius: 50% 50% 0 0;
-  transition: height 0.5s ease;
-  z-index: -1;
 }
 
 .btn:hover {
-  color: var(--white);
-}
-
-.btn:hover::before {
-  height: 280%;
+  transform: translateY(-1px);
 }
 
 .btn-primary {
-  --btn-fill: var(--green-main);
-}
-
-.btn-red {
-  --btn-fill: var(--red-accent);
-}
-
-.btn-outline {
-  --btn-fill: var(--green-main);
-}
-
-.hero .btn-primary,
-.hero .btn-red {
-  border-color: var(--white);
+  background: var(--green-main);
   color: var(--white);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .btn::before {
-    transition: none;
-  }
+.btn-red {
+  background: var(--red-accent);
+  color: var(--white);
+}
+
+.btn-outline {
+  border: 2px solid var(--green-main);
+  color: var(--green-main);
+  background: transparent;
 }
 
 .site-header {
