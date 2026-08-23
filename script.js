@@ -161,13 +161,44 @@ document.addEventListener("DOMContentLoaded", () => {
       return slide ? slide.getBoundingClientRect().width + 12 : 320;
     };
 
+    const easeOut = (t) => 1 - (1 - t) ** 3;
+
+    const glideTo = (left) => {
+      const max = Math.max(0, track.scrollWidth - track.clientWidth);
+      const target = Math.max(0, Math.min(max, left));
+      const start = track.scrollLeft;
+      const change = target - start;
+      if (Math.abs(change) < 1) return;
+
+      const duration = 720;
+      const started = performance.now();
+
+      const tick = (now) => {
+        const progress = Math.min((now - started) / duration, 1);
+        track.scrollLeft = start + change * easeOut(progress);
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+
+      requestAnimationFrame(tick);
+    };
+
+    const updateArrows = () => {
+      const max = track.scrollWidth - track.clientWidth;
+      prevBtn.classList.toggle("is-hidden", track.scrollLeft <= 8);
+      nextBtn.classList.toggle("is-hidden", track.scrollLeft >= max - 8);
+    };
+
     prevBtn.addEventListener("click", () => {
-      track.scrollBy({ left: -slideWidth(), behavior: "smooth" });
+      glideTo(track.scrollLeft - slideWidth());
     });
 
     nextBtn.addEventListener("click", () => {
-      track.scrollBy({ left: slideWidth(), behavior: "smooth" });
+      glideTo(track.scrollLeft + slideWidth());
     });
+
+    track.addEventListener("scroll", updateArrows, { passive: true });
+    window.addEventListener("resize", updateArrows);
+    updateArrows();
   }
 
   const beforeAfter = document.querySelector(".before-after");
