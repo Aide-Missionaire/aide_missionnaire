@@ -28,7 +28,7 @@ Le site est en HTML, CSS et JavaScript. Aucun outil de compilation n’est néce
 3. Modifiez le texte dans les fichiers `.html`.
 4. Les couleurs et mises en page se règlent dans `styles.css`.
 
-Les formulaires de contact et de parrainage envoient un e-mail à `aidemissionnaire@gmail.com`.
+Les formulaires de contact et de parrainage envoient un e-mail à `aidemissionaire@gmail.com`.
 Les dons en ligne passent par HelloAsso.
 
 ## Mise en ligne
