@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --green-main: #016531;
   --green-light: #008c43;
   --red-accent: #970d00;
@@ -195,7 +195,7 @@ h3 {
   color: var(--white);
   background:
     linear-gradient(rgba(1, 101, 49, 0.74), rgba(1, 101, 49, 0.48)),
-    url("photos%20%C3%A0%20mettre%20dans%20le%20site/Image%201%20Accueil/image%201%20accueil%20(5).jpeg")
+    url("images/accueil.jpg")
       center / cover;
   display: flex;
   align-items: center;
@@ -614,124 +614,9 @@ h3 {
   font-size: 0.95rem;
 }
 
-.news-feed {
-  max-width: 760px;
-  margin: 0 auto;
-  display: grid;
-  gap: 30px;
-}
-
 .actualites-stack {
   display: grid;
   gap: 30px;
-}
-
-.actualites-heading {
-  margin: 0;
-}
-
-.social-post {
-  background: #ffffff;
-  border: 1px solid #dfe4ea;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-}
-
-.social-head {
-  padding: 12px 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.social-profile {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.social-avatar {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid #d8e3db;
-}
-
-.social-name {
-  margin: 0;
-  font-weight: 700;
-}
-
-.social-meta {
-  margin: 2px 0 0;
-  font-size: 0.86rem;
-  color: #6b7280;
-}
-
-.social-more {
-  color: #6b7280;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.social-copy {
-  padding: 8px 14px 16px;
-  color: #374151;
-  line-height: 1.5;
-}
-
-.social-media {
-  border-top: 1px solid #edf0f3;
-  border-bottom: 1px solid #edf0f3;
-}
-
-.social-media img {
-  width: 100%;
-  height: 360px;
-  object-fit: cover;
-}
-
-.social-media.quote-media {
-  background: linear-gradient(135deg, #beeff2, #d2d7dc);
-  display: grid;
-  place-items: center;
-  min-height: 340px;
-  padding: 28px;
-}
-
-.social-quote {
-  margin: 0;
-  font-size: clamp(1.5rem, 3vw, 2.05rem);
-  line-height: 1.35;
-  text-align: center;
-  font-weight: 800;
-  max-width: 560px;
-}
-
-.social-stats {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 14px;
-  color: #4b5563;
-  font-size: 0.95rem;
-}
-
-.social-actions {
-  display: flex;
-  justify-content: space-around;
-  border-top: 1px solid #edf0f3;
-  padding: 10px 8px 12px;
-}
-
-.social-action {
-  border: none;
-  background: transparent;
-  color: #4b5563;
-  font-weight: 600;
-  cursor: pointer;
 }
 
 .total-box {

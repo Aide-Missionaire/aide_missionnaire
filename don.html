@@ -1,20 +1,20 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Faire un don a Aide Missionnaire." />
+    <meta name="description" content="Faire un don à Aide Missionnaire." />
     <title>Aide Missionnaire | Don</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="photos%20%C3%A0%20mettre%20dans%20le%20site/logo.png" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-wrap">
-        <a class="brand" href="index.html"><img src="photos%20%C3%A0%20mettre%20dans%20le%20site/logo.png" alt="Logo Aide Missionnaire" /><span class="brand-text">Aide<br />Missionnaire</span></a>
+        <a class="brand" href="index.html"><img src="images/logo.png" alt="Logo Aide Missionnaire" /><span class="brand-text">Aide<br />Missionnaire</span></a>
         <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" /></svg></button>
         <nav class="main-nav"><ul><li><a href="index.html">Accueil</a></li><li><a href="parrainage.html">Parrainage</a></li><li><a class="active" href="don.html">Don</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="association.html">L'association</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
         <a class="btn btn-primary desktop-donate" href="don.html">Faire un don</a>
@@ -28,12 +28,12 @@
         <div class="grid-3">
           <article class="card">
             <h2>Nourriture</h2>
-            <img class="don-card-image" src="photos-madagascar/don-riz.png" alt="Bol de riz partagé" />
+            <img class="don-card-image" src="images/don-nourriture.png" alt="Bol de riz partagé" />
             <p class="muted">Soutien alimentaire immédiat et spiruline pour les enfants malnutris.</p>
           </article>
           <article class="card">
             <h2>Soins</h2>
-            <img class="don-card-image" src="photos-madagascar/don-soins.png" alt="Jeune fille accompagnée par l'association" />
+            <img class="don-card-image" src="images/don-soins.png" alt="Jeune fille accompagnée par l'association" />
             <p class="muted">Depuis 19 ans, le dispensaire construit par l'association offre un accès aux soins aux personnes les plus démunies.</p>
             <ul class="action-list">
               <li>Accouchements dans un lieu médicalisé, en présence d'un médecin</li>
@@ -43,7 +43,7 @@
           </article>
           <article class="card">
             <h2>Projets</h2>
-            <img class="don-card-image" src="photos-madagascar/don-projets.png" alt="Chantier et travaux de l'association" />
+            <img class="don-card-image" src="images/don-projets.png" alt="Chantier et travaux de l'association" />
             <p class="muted">Écoles, internat, bicyclettes et réfection de l'église Saint-Pierre de Mandoto.</p>
           </article>
         </div>
@@ -53,7 +53,30 @@
       </div>
     </main>
     <footer class="site-footer">
-      <div class="container footer-grid"><div><h3 class="footer-title">Aide Missionnaire</h3><p class="footer-note">Association humanitaire pour l'<strong>education</strong>, la <strong>sante</strong> et l'<strong>aide sociale</strong>.</p></div><div><h3 class="footer-title">Liens</h3><ul class="footer-list"><li><a href="index.html">Accueil</a></li><li><a href="parrainage.html">Parrainage</a></li><li><a href="don.html">Don</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="association.html">L'association</a></li><li><a href="contact.html">Contact</a></li><li><a href="mentions-legales.html">Mentions legales</a></li><li><a href="politique-confidentialite.html">Politique de confidentialite</a></li></ul></div><div><h3 class="footer-title">Newsletter</h3><form data-message="Merci pour votre inscription a la newsletter."><label for="nlemail3">Email</label><input id="nlemail3" type="email" placeholder="Votre email" required /><button class="btn btn-primary" type="submit">S'inscrire</button></form></div></div>
+      <div class="container footer-grid">
+        <div>
+          <h3 class="footer-title">Aide Missionnaire</h3>
+          <p class="footer-note">Association humanitaire pour l'<strong>éducation</strong>, la <strong>santé</strong> et l'<strong>aide sociale</strong>.</p>
+        </div>
+        <div>
+          <h3 class="footer-title">Liens</h3>
+          <ul class="footer-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="parrainage.html">Parrainage</a></li>
+            <li><a href="don.html">Don</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="association.html">L'association</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Informations légales</h3>
+          <ul class="footer-list">
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="container footer-bottom">© <span id="current-year"></span> Aide Missionnaire</div>
     </footer>
     <script src="script.js"></script>
