@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --green-main: #016531;
   --green-light: #008c43;
   --red-accent: #970d00;
@@ -195,7 +195,7 @@ h3 {
   color: var(--white);
   background:
     linear-gradient(rgba(1, 101, 49, 0.74), rgba(1, 101, 49, 0.48)),
-    url("images/accueil.jpg")
+    url("photos%20%C3%A0%20mettre%20dans%20le%20site/Image%201%20Accueil/image%201%20accueil%20(5).jpeg")
       center / cover;
   display: flex;
   align-items: center;

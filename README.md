@@ -18,17 +18,8 @@ Le site est en HTML, CSS et JavaScript. Aucun outil de compilation n’est néce
 | `politique-confidentialite.html` | Politique de confidentialité |
 | `styles.css` | Apparence du site |
 | `script.js` | Menu mobile, formulaires, totaux, galerie |
-| `images/` | Logo, favicon et photos |
-
-## Dossier images
-
-- `logo.png` et `favicon.png` : identité visuelle
-- `accueil.jpg` : grande photo de la page d’accueil
-- `galerie-01.jpg` à `galerie-20.jpg` : photos de la galerie
-- `don-nourriture.png`, `don-soins.png`, `don-projets.png` : page Don
-- `rehab-avant.png` et `rehab-apres.png` : comparateur avant / après
-
-Pour changer une photo, remplacez le fichier dans `images/` en gardant le même nom.
+| `photos-madagascar/` | Photos de la galerie, des dons et du comparateur avant / après |
+| `photos à mettre dans le site/` | Logo, favicon et grande photo d’accueil |
 
 ## Modifier le site
 
