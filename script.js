@@ -1,6 +1,6 @@
 ﻿document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".main-nav"); 
+  const nav = document.querySelector(".main-nav");
   const yearTarget = document.querySelector("#current-year");
 
   if (navToggle && nav) {
