@@ -219,12 +219,6 @@ h3 {
   flex-wrap: wrap;
 }
 
-.btn-hero-don {
-  padding: 20px 48px;
-  font-size: clamp(1.2rem, 2.6vw, 1.5rem);
-  min-width: min(340px, 92%);
-}
-
 .grid-2,
 .grid-3,
 .grid-4,
@@ -569,19 +563,6 @@ h3 {
 
 .don-page {
   padding-top: 96px;
-}
-
-.don-cta {
-  margin-top: 48px;
-  margin-bottom: 12px;
-  display: flex;
-  justify-content: center;
-}
-
-.btn-helloasso {
-  padding: 20px 48px;
-  font-size: 1.28rem;
-  min-width: min(460px, 92%);
 }
 
 .legal-card h2 {
